@@ -1,0 +1,10 @@
+def trim_series(dataframe, num_of_years):
+  '''
+  DESC.: Function that takes a dataframe an a specified number of years and
+          trims the dataset in order to have the desired number of rows.
+  INPUT: dataframe (pandas, from yfinance)
+  INPUT: num_of_years (float)
+  OUTPUT: trimmed dataframe
+  '''
+  dataframe_trim = dataframe.iloc[-round(num_of_years * 365):]
+  return dataframe_trim
