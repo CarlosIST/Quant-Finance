@@ -1,0 +1,10 @@
+def rename_close(dataframe, ticker):
+  '''
+  DESC.: Function that takes a dataframe and a ticker and renames the existing
+          Adj Close column to CLOSE_ticker
+  INPUT: dataframe (pandas, from yfinance)
+  INPUT: ticker (str)
+  OUTPUT: dataframe with renamed column
+  '''
+  dataframe.rename(columns={'Adj Close': 'CLOSE_'+ticker}, inplace = True)
+  return
