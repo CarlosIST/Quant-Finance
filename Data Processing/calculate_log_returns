@@ -1,0 +1,8 @@
+## pandas.Dataframe.shift(# lags)
+## Using shift(1), we can get the row just above the present row. Here, # lags is 1.
+## log() is a function given in numpy package in python. It calculates the natural log of the value given inside it.
+#data_blk['Log Return'] = np.log(PG['Adj Close']/PG['Adj Close'].shift(1))
+
+def calculate_log_returns (dataframe, ticker):
+  dataframe['LOG_RETURN_'+ticker] = np.log(dataframe['Adj Close'] / dataframe['Adj Close'].shift(1))
+  return 
